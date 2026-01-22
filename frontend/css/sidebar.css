@@ -1,0 +1,142 @@
+/* Reset + estructura básica */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f6f8;
+  }
+  
+  /* HEADER */
+  .main-header {
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    position: relative;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .usuario {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .usuario span {
+    font-weight: 500;
+  }
+  
+  /* BOTÓN HAMBURGUESA ☰ */
+  .btn-toggle {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: black;
+    cursor: pointer;
+    margin-right: 1rem;
+    z-index: 1100;
+  }
+  
+  /* SIDEBAR RETRÁCTIL */
+  .sidebar {
+    width: 250px;
+    background-color: white;
+    padding: 1rem;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+  
+  .sidebar.mostrar {
+    transform: translateX(0);
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar li {
+    margin-bottom: 1rem;
+  }
+  
+  .sidebar a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background 0.2s;
+  }
+  
+  .sidebar a:hover {
+    background-color: #0056b3;
+    color: white;
+  }
+
+  .sidebar a:hover {
+    fill: white;
+  }
+  
+  /* LAYOUT CONTENEDOR GENERAL */
+  .layout {
+    display: block; /* no empuja el sidebar */
+  }
+  
+
+  /* BOTÓN ROJO GENERAL */
+  .btn-rojo {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .btn-rojo:hover {
+    background-color: #c82333;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .sidebar {
+      top: 60px;
+      transform: translateX(-100%);
+    }
+  
+    .sidebar.mostrar {
+      transform: translateX(0);
+    }
+  }
+  

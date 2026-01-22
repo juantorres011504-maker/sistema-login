@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Iniciar sesión</title>
+  <link rel="stylesheet" href="./css/regis-login.css">
+</head>
+<body>
+  <div class="contenedor">
+    <h1>Iniciar sesión</h1>
+    <form id="formLogin">
+      <input type="email" name="email" placeholder="Correo electrónico" required><br>
+      <input type="password" name="contraseña" placeholder="Contraseña" required><br>
+      <button type="submit">Entrar</button>
+    </form>
+
+    <p>¿No tienes cuenta? <a href="register.html">Regístrate aquí</a></p>
+    <p id="mensajeError" class="error"></p>
+  </div>
+
+  <script src="./javascripts/auth.js"></script>
+</body>
+</html>

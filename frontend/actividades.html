@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mis Actividades</title>
+  <link rel="stylesheet" href="./css/actividades.css">
+  <link rel="stylesheet" href="./css/sidebar.css">
+</head>
+<body>
+  <header class="main-header">
+    <button id="toggleSidebar" class="btn-toggle">☰</button>
+    <div class="logo"><span id="nombreUsuarioHeader">Usuario</span></div>
+    <div class="usuario">
+      <span id="nombreUsuarioHeader">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 970" width="24px" fill="black"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z"/></svg>
+      </span>
+      <button id="cerrarSesionHeader" class="btn-rojo">Cerrar sesión</button>
+    </div>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <ul>
+      <li>
+        <a href="dashboard.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M520-600v-240h320v240H520ZM120-440v-400h320v400H120Zm400 320v-400h320v400H520Zm-400 0v-240h320v240H120Zm80-400h160v-240H200v240Zm400 320h160v-240H600v240Zm0-480h160v-80H600v80ZM200-200h160v-80H200v80Zm160-320Zm240-160Zm0 240ZM360-280Z"/></svg>
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="perfil.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Zm80-80h480v-32q0-11-5.5-20T700-306q-54-27-109-40.5T480-360q-56 0-111 13.5T260-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T560-640q0-33-23.5-56.5T480-720q-33 0-56.5 23.5T400-640q0 33 23.5 56.5T480-560Zm0-80Zm0 400Z"/></svg>
+          Tu Perfil
+        </a>
+      </li>
+      <li>
+        <a href="actividades.html">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M680-80q-83 0-141.5-58.5T480-280q0-83 58.5-141.5T680-480q83 0 141.5 58.5T880-280q0 83-58.5 141.5T680-80Zm67-105 28-28-75-75v-112h-40v128l87 87Zm-547 65q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h167q11-35 43-57.5t70-22.5q40 0 71.5 22.5T594-840h166q33 0 56.5 23.5T840-760v250q-18-13-38-22t-42-16v-212h-80v120H280v-120h-80v560h212q7 22 16 42t22 38H200Zm280-640q17 0 28.5-11.5T520-800q0-17-11.5-28.5T480-840q-17 0-28.5 11.5T440-800q0 17 11.5 28.5T480-760Z"/></svg>
+          Actividades
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <div class="contenedor">
+    <h1>Mis Actividades</h1>
+    <div id="actividadesList" class="tabla-actividades">
+      <table>
+        <thead>
+          <tr>
+            <th>Acción</th>
+            <th>Descripción</th>
+            <th>Eliminar</th>
+          </tr>
+        </thead>
+        <tbody id="tablaActividadesBody">
+          <tr><td colspan="3">Cargando actividades...</td></tr>
+        </tbody>
+      </table>
+  </div>
+    
+  <h2>Registrar nueva actividad</h2>
+    <form id="formActividad" class="formulario">
+      <input type="text" id="accion" name="accion" placeholder="Acción" required>
+      <input type="text" id="descripcion" name="descripcion" placeholder="Descripción" required>
+      <button type="submit" class="btn-verde" id="botonAgregarActividad">Registrar Actividad</button>
+    </form>
+    
+  <a href="dashboard.html" class="btn-azul-link">← Volver al Dashboard</a>
+  </div>
+
+  <script src="./javascripts/actividades.js"></script>
+  <script src="./javascripts/logout.js"></script>
+  <script src="./javascripts/sidebar.js"></script>
+  
+</body>
+</html>

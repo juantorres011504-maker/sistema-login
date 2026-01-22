@@ -1,0 +1,93 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  }
+  
+  .contenedor {
+    flex: 1;
+    min-width: 0;
+    max-width: 600px; /* ⬅️ Cambia este valor según el ancho deseado */
+    margin: 2rem auto; /* ⬅️ Centrado horizontal */
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin: 0.5rem 0;
+    text-align: left;
+  }
+  
+  .tarjeta {
+    background-color: #f1f9ff;
+    padding: 1rem;
+    border-radius: 12px;
+    margin: 1rem 0 2rem;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+  }
+  
+  .formulario {
+    margin-top: 1rem;
+    text-align: left;
+  }
+  
+  .campo {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+  }
+  
+  .btn-azul {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .btn-azul:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn-azul-link {
+    display: block;
+    margin: 1.5rem 0 0.5rem;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+  }
+  
+  .btn-rojo {
+    background-color: #dc3545;
+    color: white;
+    padding: 0.75rem;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    transition: background 0.3s;
+  }
+  
+  .btn-rojo:hover {
+    background-color: #c82333;
+  }
+  
